@@ -1,7 +1,7 @@
 import os
 import requests
 import base64
-from flask import Flask, redirect, request, jsonify
+from flask import Flask, redirect, request, jsonify, render_template
 from urllib.parse import urlencode
 from dotenv import load_dotenv
 
@@ -19,83 +19,10 @@ CLIENT_SECRET = os.environ.get("CANVA_CLIENT_SECRET")
 BASE_URL = os.environ.get("RENDER_EXTERNAL_URL", "https://canvas-api-eqd4.onrender.com")
 REDIRECT_URI = f"{BASE_URL}/oauth/callback"
 
-# 1. RUTA HEALTH CHECK (Esencial para que Canva valide tu integración)
+# 1. RUTA HOME
 @app.route('/')
 def home():
-    return """
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Canva API Integration</title>
-        <style>
-            body {
-                font-family: 'Inter', system-ui, -apple-system, sans-serif;
-                background: #0f172a;
-                color: white;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                min-height: 100vh;
-                margin: 0;
-                text-align: center;
-            }
-            .container {
-                background: rgba(30, 41, 59, 0.7);
-                backdrop-filter: blur(10px);
-                padding: 3rem;
-                border-radius: 24px;
-                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-                max-width: 600px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            img {
-                width: 100%;
-                max-width: 400px;
-                border-radius: 16px;
-                margin-bottom: 2rem;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            }
-            h1 {
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-                background: linear-gradient(to right, #818cf8, #c084fc);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-            p {
-                color: #94a3b8;
-                font-size: 1.1rem;
-                margin-bottom: 2rem;
-            }
-            .btn {
-                background: linear-gradient(to right, #6366f1, #a855f7);
-                color: white;
-                padding: 1rem 2rem;
-                border-radius: 12px;
-                text-decoration: none;
-                font-weight: 600;
-                transition: transform 0.2s, box-shadow 0.2s;
-                display: inline-block;
-            }
-            .btn:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <img src="/static/banner.png" alt="Canva Integration Banner">
-            <h1>Canva API Active</h1>
-            <p>La integración con Python y Canva está funcionando correctamente.</p>
-            <a href="/login" class="btn">Conectar con Canva</a>
-        </div>
-    </body>
-    </html>
-    """
+    return render_template('index.html')
 
 # 2. RUTA DE LOGIN (Inicia el flujo)
 @app.route('/login')
