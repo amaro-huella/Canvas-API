@@ -13,7 +13,7 @@ CLIENT_SECRET = os.environ.get("CANVA_CLIENT_SECRET")
 
 # IMPORTANTE: En Render, tu URL será algo como https://mi-app.onrender.com
 # Asegúrate de que esta URL coincida con la que pusiste en el Developer Portal de Canva
-BASE_URL = os.environ.get("RENDER_EXTERNAL_URL", "http://localhost:5000")
+BASE_URL = os.environ.get("RENDER_EXTERNAL_URL", "https://canvas-api-eqd4.onrender.com")
 REDIRECT_URI = f"{BASE_URL}/oauth/callback"
 
 # 1. RUTA HEALTH CHECK (Esencial para que Canva valide tu integración)
