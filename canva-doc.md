@@ -10,14 +10,14 @@ For example, you could use the Connect APIs to create an integration between Can
 
 ## Public vs. private integrations
 
-An integration that uses the Connect APIs can be *public* (available to all Canva users), or *private* (available only to your team on a [Canva Enterprise](https://www.canva.com/enterprise/) plan).
+An integration that uses the Connect APIs can be _public_ (available to all Canva users), or _private_ (available only to your team on a [Canva Enterprise](https://www.canva.com/enterprise/) plan).
 
 Public integrations must first be reviewed by Canva and meet the [integration requirements](https://www.canva.dev/docs/connect/submission-checklist) before they can be made available to all Canva users.
 
 ## First steps
 
-* Follow the [Quickstart](https://www.canva.dev/docs/connect/quickstart) to get started with a Canva-created app that demonstrates some of the main API features. It's also a great template for creating an integration.
-* [Create a new integration](https://www.canva.dev/docs/connect/creating-integrations) from scratch.
+- Follow the [Quickstart](https://www.canva.dev/docs/connect/quickstart) to get started with a Canva-created app that demonstrates some of the main API features. It's also a great template for creating an integration.
+- [Create a new integration](https://www.canva.dev/docs/connect/creating-integrations) from scratch.
 
 ## Connect APIs Starter Kit
 
@@ -33,9 +33,9 @@ Some APIs and features have notices declaring they're provided as a preview. Alt
 
 Specifically, you should be aware of the following for preview APIs and features:
 
-* There might be unannounced breaking changes.
-* Any breaking changes to preview APIs won't produce a new [API version](https://www.canva.dev/docs/connect/versions).
-* Public integrations that use preview APIs or features will not pass the review process, and can't be made available to all Canva users.
+- There might be unannounced breaking changes.
+- Any breaking changes to preview APIs won't produce a new [API version](https://www.canva.dev/docs/connect/versions).
+- Public integrations that use preview APIs or features will not pass the review process, and can't be made available to all Canva users.
 
 ## Want to add features to Canva?
 
